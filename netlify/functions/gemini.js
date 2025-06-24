@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 
@@ -13,7 +15,7 @@ You are chatting with Rohan Singh.
 Answer concisely, helpfully, and in markdown style when useful.
 `;
 
-exports.handler = async function (event) {
+exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
@@ -24,28 +26,22 @@ exports.handler = async function (event) {
   }
 
   try {
-    const response = await fetch(`${GEMINI_URL}?key=${GEMINI_API_KEY}`, {
+    const res = await fetch(`${GEMINI_URL}?key=${GEMINI_API_KEY}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [
-          { role: 'user', parts: [{ text: SYSTEM_CONTEXT }] },
+          { role: 'system', parts: [{ text: SYSTEM_CONTEXT }] },
           { role: 'user', parts: [{ text: prompt }] }
         ]
       })
     });
 
-    const data = await response.json();
-    const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'No response.';
+    const data = await res.json();
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response from Gemini.';
+    return { statusCode: 200, body: JSON.stringify({ reply }) };
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ reply })
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: error.message })
-    };
+  } catch (err) {
+    return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
   }
 };
