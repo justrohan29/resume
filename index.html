@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohan's Retro Résumé</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0"></script>
+  <link rel="preload" href="assets/fonts/PressStart2P-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+</head>
+<body>
+  <main>
+    <canvas id="matrix"></canvas>
+
+    <section class="landing">
+      <h1>Rohan Singh</h1>
+      <p class="one-liner">“College junior learning as I go and building what I can.”</p>
+      <p class="tagline">Focused on AI, web dev, and building things that don’t crash.</p>
+      <a href="#projects" class="cta-button">📁 View My Work</a>
+    </section>
+
+    <section class="about">
+      <h2>🙋‍♂️ About Me</h2>
+      <p>I'm a computer science undergrad with an interest in AI, full-stack development, and building simple tools that actually solve problems. Still learning, always experimenting.</p>
+      <p class="fun-fact">Currently trying to master ML, write better code, and not break my dev environment.</p>
+    </section>
+
+    <section class="skills">
+      <h2>🛠️ Skills</h2>
+
+      <button class="folder-toggle">📁 Languages</button>
+      <div class="folder-content">
+        <ul>
+          <li>Python</li>
+          <li>C++</li>
+          <li>HTML/CSS</li>
+        </ul>
+      </div>
+
+      <button class="folder-toggle">📁 AI & ML</button>
+      <div class="folder-content">
+        <ul>
+          <li>Supervised/Unsupervised Learning</li>
+          <li>NLP (LLMs, Transformers, Prompt Engineering)</li>
+          <li>Sentiment Analysis, Classification</li>
+          <li>End-to-End ML Pipelines (Training → Inference)</li>
+          <li>PyTorch, scikit-learn, HuggingFace</li>
+          <li>OpenAI, Gemini</li>
+        </ul>
+      </div>
+
+      <button class="folder-toggle">📁 Tools & Automation</button>
+      <div class="folder-content">
+        <ul>
+          <li>LangChain</li>
+          <li>Zapier</li>
+          <li>n8n</li>
+          <li>Streamlit</li>
+          <li>Git</li>
+          <li>Firebase</li>
+          <li>Vercel</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>💡 Projects</h2>
+
+      <button class="folder-toggle">📂 Product Review Sentiment Analyzer</button>
+      <div class="folder-content">
+        <p>📝 Fine-tuned a BERT model with Hugging Face for sentiment classification.</p>
+        <p>📊 Streamlit app for real-time predictions on CSVs and structured data.</p>
+        <p>GitHub: <span class="iframe-link" data-url="">Coming soon</span><br>Live Demo: <span class="iframe-link" data-url="">Coming soon</span></p>
+      </div>
+
+      <button class="folder-toggle">📂 Structural Crack Detection</button>
+      <div class="folder-content">
+        <p>🧱 Built a CNN with VGG16 for real-time crack detection via Streamlit.</p>
+        <p>🔍 Transfer learning + 1–100 severity scale for user-friendly insights.</p>
+        <p>GitHub: <span class="iframe-link" data-url="https://github.com/justrohan29/Crack_Detection_transfered_learning">Open in window</span></p>
+      </div>
+
+      <button class="folder-toggle">📂 AI-Powered Lead Enrichment Agent</button>
+      <div class="folder-content">
+        <p>🚀 Streamlit app that automates lead research via Firecrawl & Gemini 2.0 Flash.</p>
+        <p>📎 CSV export, tone customization, and RevOps workflow enhancements.</p>
+        <p>GitHub: <span class="iframe-link" data-url="https://github.com/justrohan29/aileadenricher">Open in window</span><br>Live Demo: <span class="iframe-link" data-url="https://lead-enricher.streamlit.app/?embedded=true">Open in window</span></p>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>🎓 Education</h2>
+      <p>B.Tech in Computer Science</p>
+      <p>Delhi Technological University (DTU)</p>
+      <p>Class of 2028</p>
+    </section>
+
+    <section class="contact">
+      <h2>✉️ Contact</h2>
+      <p>Email: <a href="mailto:justrohan29@gmail.com">justrohan29@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/justrohan29">github.com/justrohan29</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/rohnis">linkedin.com/in/rohnis</a></p>
+    </section>
+  </main>
+
+  <div class="corner-buttons">
+    <button class="terminal-toggle" title="Open Terminal">🖥️</button>
+    <button class="resume-toggle" title="View Résumé">📄</button>
+  </div>
+
+  <div class="terminal-window" id="terminalWindow">
+    <div class="terminal-header" id="terminalHeader">
+      <span class="terminal-title">I'm not a trained LLM (yet)</span>
+      <button id="closeTerminal">✖</button>
+    </div>
+    <div class="terminal-output" id="terminalOutput"></div>
+    <div class="terminal-input-line">
+      <span class="prompt">></span>
+      <input type="text" id="terminalInput" autocomplete="off" />
+    </div>
+  </div>
+
+  <div id="iframeWindow" class="iframe-window" style="display: none;">
+    <div id="iframeHeader" class="iframe-header">
+      <span id="iframeTitle">🌐 Link Viewer</span>
+      <span id="iframeClose" class="iframe-close">✖</span>
+    </div>
+    <iframe id="iframeContent" src="" frameborder="0"></iframe>
+  </div>
+
+  <div id="resumeWindow" class="iframe-window" style="display: none;">
+    <div id="resumeHeader" class="iframe-header">
+      📄 Rohan's Résumé
+      <span id="resumeClose" class="iframe-close">✖</span>
+    </div>
+    <iframe id="resumeViewer" src="assets/rohan-resume.pdf" frameborder="0"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
