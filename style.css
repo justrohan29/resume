@@ -18,7 +18,7 @@ body {
 }
 
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   background-color: rgba(0, 0, 51, 0.9);
   padding: 20px;
@@ -38,6 +38,13 @@ a {
   text-decoration: underline;
 }
 
+.cta-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
 .cta-button {
   display: inline-block;
   margin-top: 10px;
@@ -46,6 +53,11 @@ a {
   color: white;
   border: 2px solid #00ffff;
   text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #00ffff;
+  color: #000033;
 }
 
 .folder-toggle {
@@ -87,6 +99,42 @@ a {
 ul {
   list-style-type: square;
   padding-left: 20px;
+}
+
+/* Experience date badges */
+.exp-date {
+  color: #ff00ff;
+  font-size: 0.7em;
+}
+
+.exp-location {
+  color: #99ffcc;
+  margin-bottom: 8px;
+  font-size: 0.85em;
+}
+
+/* Project tech stack label */
+.tech-stack {
+  color: #ff00ff;
+  margin-bottom: 8px;
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+/* Award / prize badge */
+.award-badge {
+  display: block;
+  margin-top: 4px;
+  padding-left: 1.6em;
+  font-size: 0.85em;
+  color: #ffd700;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Highlight strong tags in content */
+.folder-content strong {
+  color: #ffff00;
 }
 
 /* Matrix Background */
@@ -132,6 +180,11 @@ ul {
 
   ul {
     padding-left: 15px;
+  }
+
+  .exp-date {
+    display: block;
+    margin-top: 4px;
   }
 }
 

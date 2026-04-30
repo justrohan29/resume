@@ -1,65 +1,143 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>resume@rohn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan Singh — AI/ML Engineer & Builder</title>
+  <meta name="description"
+    content="Portfolio of Rohan Singh — CS undergrad at DTU building production-grade AI systems, agentic LLM pipelines, and serverless deployments.">
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0"></script>
   <link rel="preload" href="assets/fonts/PressStart2P-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 </head>
+
 <body>
   <main>
     <canvas id="matrix"></canvas>
 
     <section class="landing">
       <h1>Rohan Singh</h1>
-      <p class="one-liner">“College sophomore learning as I go and building what I can.”</p>
-      <p class="tagline">Focused on AI, academics, and building things that don’t crash.</p>
-      <a href="#projects" class="cta-button">📁 View My Work</a>
+
+      <p class="tagline">CS undergrad @ DTU · AI/ML Engineering · Co-Founder @ Exora</p>
+      <div class="cta-row">
+        <a href="#experience" class="cta-button" id="cta-experience">💼 Experience</a>
+        <a href="#projects" class="cta-button" id="cta-projects">📁 Projects</a>
+      </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <h2>🙋‍♂️ About Me</h2>
-      <p>I'm a computer science undergrad with an interest in AI, full-stack development, and building simple tools that actually solve problems. Still learning, always experimenting.</p>
-      <p class="fun-fact">Currently trying to get my head around ML, write better code, and not break my dev environment.</p>
+      <p>I'm a computer science undergrad with an interest in AI, full-stack development, and building simple tools that
+        actually solve problems. Still learning, always experimenting.</p>
+      <p class="fun-fact">Seeking AI/ML engineering or product development roles.</p>
     </section>
 
-    <section class="skills">
-      <h2>🛠️ Skills</h2>
+    <section class="skills" id="skills">
+      <h2>🛠️ Technical Skills</h2>
 
-      <button class="folder-toggle">📁 Languages</button>
+      <button class="folder-toggle" id="toggle-languages">📁 Languages</button>
       <div class="folder-content">
         <ul>
           <li>Python</li>
+          <li>C</li>
           <li>C++</li>
-          <li>HTML/CSS</li>
+          <li>SQL</li>
+          <li>JavaScript</li>
+          <li>HTML</li>
         </ul>
       </div>
 
-      <button class="folder-toggle">📁 AI & ML</button>
+      <button class="folder-toggle" id="toggle-aiml">📁 AI / ML</button>
       <div class="folder-content">
         <ul>
-          <li>Supervised/Unsupervised Learning</li>
-          <li>NLP (LLMs, Transformers, Prompt Engineering)</li>
-          <li>Sentiment Analysis, Classification</li>
-          <li>End-to-End ML Pipelines (Training → Inference)</li>
-          <li>PyTorch, scikit-learn, HuggingFace</li>
-          <li>OpenAI, Gemini</li>
-        </ul>
-      </div>
-
-      <button class="folder-toggle">📁 Tools & Automation</button>
-      <div class="folder-content">
-        <ul>
+          <li>Machine Learning</li>
+          <li>NLP</li>
+          <li>Transformers</li>
           <li>LangChain</li>
-          <li>Zapier</li>
-          <li>n8n</li>
+          <li>Langgraph</li>
+          <li>Gen-AI</li>
+          <li>Hugging Face</li>
+          <li>RAG</li>
+          <li>VectorDB</li>
+          <li>OpenCLAW</li>
+          <li>Claude</li>
+        </ul>
+      </div>
+
+      <button class="folder-toggle" id="toggle-frameworks">📁 Frameworks & Tools</button>
+      <div class="folder-content">
+        <ul>
+          <li>FastAPI</li>
+          <li>REST APIs</li>
           <li>Streamlit</li>
-          <li>Git</li>
-          <li>Firebase</li>
-          <li>Vercel</li>
+          <li>Playwright</li>
+          <li>Selenium</li>
+          <li>Web Scraping</li>
+          <li>Firecrawl</li>
+          <li>Next.js</li>
+        </ul>
+      </div>
+
+      <button class="folder-toggle" id="toggle-cloud">📁 Cloud & Infra</button>
+      <div class="folder-content">
+        <ul>
+          <li>AWS Lambda</li>
+          <li>Apps Script</li>
+          <li>OpenRouter</li>
+          <li>GCP</li>
+          <li>Docker</li>
+          <li>CI/CD Pipelines</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <h2>💼 Experience</h2>
+
+      <button class="folder-toggle" id="toggle-exora">📂 Exora — Co-Founder <span class="exp-date">Oct 2025 –
+          Present</span></button>
+      <div class="folder-content">
+        <p class="exp-location">📍 Delhi & Goa</p>
+        <ul>
+          <li>Building a social travel platform for community-driven experiences; leading backend systems and mobile
+            architecture (Flutter).</li>
+          <li>Developed scalable APIs for discovery, onboarding, and host management; accelerated MVP with a Flutter
+            intern.</li>
+          <li>Achieved <strong>200K+ impressions</strong> and <strong>500+ waitlist users</strong> within the first week
+            through organic growth.</li>
+          <li>Executed <strong>15+ events</strong> (30–40 attendees) across Delhi and Goa, validating demand with
+            break-even economics.</li>
+          <li>Bootstrapped via consulting (<strong>₹2L+ revenue</strong>) to extend runway and iterate on product.</li>
+        </ul>
+      </div>
+
+      <button class="folder-toggle" id="toggle-revops">📂 RevopsAgent — AI & Automation Intern <span
+          class="exp-date">Jun 2025 – Sep 2025</span></button>
+      <div class="folder-content">
+        <p class="exp-location">📍 Remote</p>
+        <ul>
+          <li>Built an AI tools intelligence platform using Playwright + Selenium, reducing manual discovery time by
+            <strong>70%</strong> and indexing <strong>200+ tools</strong>.
+          </li>
+          <li>Developed hiring automation (Python + Apps Script + OpenRouter) cutting recruiter workflow time by
+            <strong>60%</strong>, adopted by <strong>3+ clients</strong>.
+          </li>
+          <li>Scaled LLM pipelines handling <strong>1,000+ daily API calls</strong>, improving throughput by
+            <strong>40%</strong>.
+          </li>
+          <li>Deployed 4 AWS Lambda microservices achieving <strong>99.5% uptime</strong> and reducing infra cost by
+            <strong>35%</strong>.
+          </li>
+        </ul>
+      </div>
+
+      <button class="folder-toggle" id="toggle-nyc">📂 NYC Singapore — Technical Apprentice <span
+          class="exp-date">2021</span></button>
+      <div class="folder-content">
+        <p class="exp-location">📍 Singapore (Remote)</p>
+        <ul>
+          <li>Completed a structured AI/computer vision curriculum under industry mentors from Buzz AR and Mercurius,
+            delivering 2 project prototypes covering object detection and cybersecurity threat modeling.</li>
         </ul>
       </div>
     </section>
@@ -67,51 +145,78 @@
     <section class="projects" id="projects">
       <h2>💡 Projects</h2>
 
-      <button class="folder-toggle">📂 Product Review Sentiment Analyzer</button>
+      <button class="folder-toggle" id="toggle-proj-arbitrage">🏆 Agentic Arbitrage Engine — Stellar Blockchain
+        <span class="award-badge"> 2nd Prize, 0xGenIgnite Hackathon</span></button>
       <div class="folder-content">
-        <p>📝 Fine-tuned a BERT model with Hugging Face for sentiment classification.</p>
-        <p>📊 Streamlit app for real-time predictions on CSVs and structured data.</p>
-        <p>GitHub: <span class="iframe-link" data-url="">Coming soon</span><br>Live Demo: <span class="iframe-link" data-url="">Coming soon</span></p>
+        <p class="tech-stack">LangChain · Soroban . NextJS</p>
+        <ul>
+          <li>Built an autonomous arbitrage agent using Soroban + Horizon API detecting multi-hop DEX opportunities,
+            reducing simulated price fragmentation by <strong>85%</strong>.</li>
+          <li>Developed a Next.js dashboard simulation tracking <strong>50+ liquidity pools</strong> with sub-second
+            latency.</li>
+        </ul>
       </div>
 
-      <button class="folder-toggle">📂 Structural Crack Detection</button>
+      <button class="folder-toggle" id="toggle-proj-sentiment">📂 Product Review Sentiment Analyzer</button>
       <div class="folder-content">
-        <p>🧱 Built a CNN with VGG16 for real-time crack detection via Streamlit.</p>
-        <p>🔍 Transfer learning + 1–100 severity scale for user-friendly insights.</p>
-        <p>GitHub: <span class="iframe-link" data-url="https://github1s.com/justrohan29/Crack_Detection_transfered_learning">Open in window</span></p>
+        <p class="tech-stack">BERT · Hugging Face Transformers · Streamlit</p>
+        <ul>
+          <li>Fine-tuned BERT on <strong>50K reviews</strong>, achieving <strong>91% accuracy</strong> — <strong>+7
+              pts</strong> over TF-IDF baseline.</li>
+          <li>Built a Streamlit app handling <strong>100K-row CSVs</strong> with real-time predictions and exportable
+            analytics.</li>
+        </ul>
       </div>
 
-      <button class="folder-toggle">📂 AI-Powered Lead Enrichment Agent</button>
+      <button class="folder-toggle" id="toggle-proj-procurement">📂 AI-Driven Procurement Audit & Supplier
+        Intelligence</button>
       <div class="folder-content">
-        <p>🚀 Streamlit app that automates lead research via Firecrawl & Gemini 2.0 Flash.</p>
-        <p>📎 CSV export, tone customization, and RevOps workflow enhancements.</p>
-        <p>GitHub: <span class="iframe-link" data-url="https://github1s.com/justrohan29/aileadenricher">Open in window</span><br>Live Demo: <span class="iframe-link" data-url="https://lead-enricher.streamlit.app/?embedded=true">Open in window</span></p>
+        <p class="tech-stack">Python · ML · FastAPI</p>
+        <ul>
+          <li>Built an ML-assisted compliance engine that analyzed <strong>500+ supplier bids</strong>, flagging
+            <strong>23% anomaly rate</strong> and generating automated scoring reports — reducing manual audit time by
+            an estimated <strong>50%</strong>.
+          </li>
+        </ul>
+      </div>
+
+      <button class="folder-toggle" id="toggle-proj-lead">📂 AI-Powered Lead Enrichment Agent</button>
+      <div class="folder-content">
+        <p class="tech-stack">Firecrawl · Gemini 2.0 Flash · Python</p>
+        <ul>
+          <li>Automated B2B lead research by chaining Firecrawl content extraction with Gemini 2.0 Flash summarization,
+            cutting per-lead research time from <strong>15 min to under 90 seconds</strong> (10× speedup).</li>
+        </ul>
+        <p>GitHub: <span class="iframe-link" data-url="https://github1s.com/justrohan29/aileadenricher">Open in
+            window</span><br>Live Demo: <span class="iframe-link"
+            data-url="https://lead-enricher.streamlit.app/?embedded=true">Open in window</span></p>
       </div>
     </section>
 
-    <section class="education">
+    <section class="education" id="education">
       <h2>🎓 Education</h2>
+      <p><strong>Delhi Technological University (DTU)</strong></p>
       <p>B.Tech in Computer Science</p>
-      <p>Delhi Technological University (DTU)</p>
-      <p>Class of 2028</p>
+      <p>2024 – 2028 · Delhi, India</p>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <h2>✉️ Contact</h2>
       <p>Email: <a href="mailto:justrohan29@gmail.com">justrohan29@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/justrohan29">github.com/justrohan29</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/rohnis">linkedin.com/in/rohnis</a></p>
+      <p>Location: Delhi, India</p>
     </section>
   </main>
 
   <div class="corner-buttons">
-    <button class="terminal-toggle" title="Open Terminal">🖥️</button>
-    <button class="resume-toggle" title="View Résumé">📄</button>
+    <button class="terminal-toggle" title="Open Terminal" id="btn-terminal">🖥️</button>
+    <button class="resume-toggle" title="View Résumé" id="btn-resume">📄</button>
   </div>
 
   <div class="terminal-window" id="terminalWindow">
     <div class="terminal-header" id="terminalHeader">
-      <span class="terminal-title">I'm not a trained LLM (yet)</span>
+      <span class="terminal-title">rohan@portfolio:~$</span>
       <button id="closeTerminal">✖</button>
     </div>
     <div class="terminal-output" id="terminalOutput"></div>
@@ -134,9 +239,10 @@
       📄 Rohan's Résumé
       <span id="resumeClose" class="iframe-close">✖</span>
     </div>
-    <iframe id="resumeViewer" src="assets/rohan-resume.pdf" frameborder="0"></iframe>
+    <iframe id="resumeViewer" src="assets/resume.pdf" frameborder="0"></iframe>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>

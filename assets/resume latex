@@ -1,0 +1,187 @@
+%-------------------------
+% Rohan Singh — AI/ML Resume (Overleaf-ready)
+% Based on Jake's Resume template, heavily modified
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Accent color
+\definecolor{accent}{HTML}{1A1A2E}
+\definecolor{linkblue}{HTML}{0066CC}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\color{accent}
+}{}{0em}{}[\color{accent}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \textbf{Rohan Singh}} \\ \vspace{6pt}
+    \small
+    \faEnvelope\ \href{mailto:justrohan29@gmail.com}{\underline{justrohan29@gmail.com}} \quad
+    \faMapMarker*\ Delhi, India \quad
+    \faLinkedin\ \href{https://linkedin.com/in/rohnis}{\underline{rohnis}} \quad
+    \faGithub\ \href{https://github.com/justrohan29}{\underline{justrohan29}} \quad
+\faGlobe\ \href{https://resumerohan.netlify.app/}{\underline{portfolio}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{
+Second-year CS undergraduate at DTU building production-grade AI systems — agentic LLM pipelines, serverless deployments, and fine-tuned NLP models. Delivered measurable impact across automation, blockchain, and computer vision; seeking AI/ML engineering or product development roles.
+}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages:} Python, C, C++, SQL, JavaScript, HTML \\
+    \textbf{AI / ML:} Machine Learning, NLP, Transformers, LangChain, Langgraph, Gen-AI, Hugging Face, RAG, VectorDB, OpenCLAW, Claude \\
+    \textbf{Frameworks \& Tools:} FastAPI, REST APIs Streamlit, Playwright, Selenium, Web Scraping, Firecrawl, Next.js \\
+    \textbf{Cloud \& Infra:} AWS Lambda, Apps Script, OpenRouter, GCP Docker, CI/CD Pipelines\\
+  }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {RevopsAgent}{Jun 2025 -- Sep 2025}
+    {AI \& Automation Intern}{Remote}
+    \resumeItemListStart
+      \resumeItem{Built an AI tools intelligence platform using Playwright + Selenium, reducing manual discovery time by \textbf{70\%} and indexing \textbf{200+ tools}.}
+    \resumeItem{Developed hiring automation (Python + Apps Script + OpenRouter) cutting recruiter workflow time by \textbf{60\%}, adopted by \textbf{3+ clients}.}
+    \resumeItem{Scaled LLM pipelines handling \textbf{1,000+ daily API calls}, improving throughput by \textbf{40\%}.}
+    \resumeItem{Deployed 4 AWS Lambda microservices achieving \textbf{99.5\% uptime} and reducing infra cost by \textbf{35\%}.}
+    \resumeItemListEnd
+      \resumeSubheading
+    {Exora}{Oct 2025 -- Present}
+    {Co-Founder}{Delhi \& Goa}
+    \resumeItemListStart
+    \resumeItem{Building a social travel platform for community-driven experiences; leading backend systems and mobile architecture (Flutter).}
+\resumeItem{Developed scalable APIs for discovery, onboarding, and host management; accelerated MVP with a Flutter intern.}
+\resumeItem{Achieved \textbf{200K+ impressions} and \textbf{500+ waitlist users} within the first week through organic growth.}
+\resumeItem{Executed \textbf{15+ events} (30–40 attendees) across Delhi and Goa, validating demand with break-even economics.}
+\resumeItem{Bootstrapped via consulting (\textbf{₹2L+ revenue}) to extend runway and iterate on product.}
+    \resumeItemListEnd
+  \resumeSubheading
+    {National Youth Council Singapore}{2024}
+    {Technology Apprentice}{Singapore (Remote)}
+    \resumeItemListStart
+      \resumeItem{Completed a structured AI/computer vision curriculum under industry mentors from Buzz AR and Mercurius, delivering 2 project prototypes covering object detection and cybersecurity threat modeling.}
+    \resumeItemListEnd
+    
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Agentic Arbitrage Engine — Stellar Blockchain} $|$ \emph{LangChain, Soroban} $|$ \textbf{ 2nd Prize, 0xGenIgnite Hackathon}}{}
+    \resumeItemListStart
+   \resumeItem{Built an autonomous arbitrage agent using Soroban + Horizon API detecting multi-hop DEX opportunities, reducing simulated price fragmentation by \textbf{85\%}.}
+\resumeItem{Developed a Next.js dashboard simulation tracking \textbf{50+ liquidity pools} with sub-second latency.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Product Review Sentiment Analyzer} $|$ \emph{BERT, Hugging Face Transformers, Streamlit}}{}
+    \resumeItemListStart
+      \resumeItem{Fine-tuned BERT on \textbf{50K reviews}, achieving \textbf{91\% accuracy} — \textbf{+7 pts} over TF-IDF baseline.}
+\resumeItem{Built a Streamlit app handling \textbf{100K-row CSVs} with real-time predictions and exportable analytics.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{AI-Driven Procurement Audit \& Supplier Intelligence} $|$ \emph{Python, ML, FastAPI}}{}
+    \resumeItemListStart
+      \resumeItem{Built an ML-assisted compliance engine that analyzed \textbf{500+ supplier bids}, flagging \textbf{23\% anomaly rate} and generating automated scoring reports — reducing manual audit time by an estimated \textbf{50\%}.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{AI-Powered Lead Enrichment Agent} $|$ \emph{Firecrawl, Gemini 2.0 Flash, Python}}{}
+    \resumeItemListStart
+      \resumeItem{Automated B2B lead research by chaining Firecrawl content extraction with Gemini 2.0 Flash summarization, cutting per-lead research time from \textbf{15 min to under 90 seconds} (10$\times$ speedup).}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Delhi Technological University}{Delhi, India}
+    {B.Tech in Computer Science}{2024 -- 2028}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

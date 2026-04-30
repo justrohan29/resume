@@ -43,50 +43,68 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function handleCommand(cmd) {
-  const cleaned = cmd.trim().toLowerCase();
+    const cleaned = cmd.trim().toLowerCase();
 
-  // Response printer
-  const respond = (text) => print(text);
+    const respond = (text) => print(text);
 
-  // Fuzzy matching groups
-  const isAbout = /^(about|who are you|tell me about|abt|bio)$/i.test(cleaned);
-  const isSkills = /^(skills?|what can you do|abilities|stack)$/i.test(cleaned);
-  const isProjects = /^(projects?|proj|show projects|work)$/i.test(cleaned);
-  const isClear = /^(clear|cls)$/i.test(cleaned);
-  const isHelp = /^(help|\?)$/i.test(cleaned);
+    // Fuzzy matching groups
+    const isAbout = /^(about|who are you|tell me about|abt|bio|summary)$/i.test(cleaned);
+    const isSkills = /^(skills?|what can you do|abilities|stack|tech)$/i.test(cleaned);
+    const isProjects = /^(projects?|proj|show projects|work)$/i.test(cleaned);
+    const isExperience = /^(experience|exp|jobs?|work history|career)$/i.test(cleaned);
+    const isEducation = /^(education|edu|school|college|university)$/i.test(cleaned);
+    const isContact = /^(contact|email|reach|links)$/i.test(cleaned);
+    const isClear = /^(clear|cls)$/i.test(cleaned);
+    const isHelp = /^(help|\?)$/i.test(cleaned);
 
-  // Easter eggs
-  if (cleaned === "hi" || cleaned === "hello") {
-    return respond("👋 Hey there! Try typing 'about', 'skills', or 'projects'");
+    // Easter eggs
+    if (cleaned === "hi" || cleaned === "hello") {
+      return respond("👋 Hey! I'm Rohan — try 'about', 'experience', 'skills', or 'projects'");
+    }
+
+    if (cleaned === "exit") {
+      return respond("You can't escape me that easily 😈");
+    }
+
+    if (cleaned === "exora") {
+      return respond("🌍 Exora — a social travel platform I co-founded.\n200K+ impressions, 500+ waitlist users, 15+ events across Delhi & Goa.");
+    }
+
+    if (isClear) {
+      output.innerHTML = '';
+      return;
+    }
+
+    if (isAbout) {
+      return respond(`Second-year CS undergrad at DTU building production-grade AI systems — agentic LLM pipelines, serverless deployments, and fine-tuned NLP models.\nSeeking AI/ML engineering or product development roles.\nTry 'experience' or 'projects'`);
+    }
+
+    if (isSkills) {
+      return respond(`Languages: Python, C, C++, SQL, JavaScript, HTML\nAI/ML: Machine Learning, NLP, Transformers, LangChain, Langgraph, Hugging Face, RAG, VectorDB\nFrameworks: FastAPI, Streamlit, Playwright, Selenium, Firecrawl, Next.js\nCloud: AWS Lambda, Apps Script, OpenRouter, GCP, Docker, CI/CD`);
+    }
+
+    if (isExperience) {
+      return respond(`💼 Experience:\n• Exora — Co-Founder (Oct 2025 – Present)\n  Social travel platform, 200K+ impressions, 15+ events\n• RevopsAgent — AI & Automation Intern (Jun – Sep 2025)\n  Built AI tools platform, scaled LLM pipelines, deployed AWS Lambda\n• National Youth Council Singapore — Tech Apprentice (2024)\n  AI/CV curriculum, 2 prototypes`);
+    }
+
+    if (isProjects) {
+      return respond(`📁 Projects:\n• Agentic Arbitrage Engine (🏆 2nd Prize, 0xGenIgnite)\n• Product Review Sentiment Analyzer (91% accuracy)\n• AI-Driven Procurement Audit & Supplier Intelligence\n• AI-Powered Lead Enrichment Agent (10× speedup)`);
+    }
+
+    if (isEducation) {
+      return respond(`🎓 Delhi Technological University (DTU)\nB.Tech in Computer Science — 2024 to 2028\nDelhi, India`);
+    }
+
+    if (isContact) {
+      return respond(`✉️ justrohan29@gmail.com\n🔗 github.com/justrohan29\n🔗 linkedin.com/in/rohnis\n📍 Delhi, India`);
+    }
+
+    if (isHelp) {
+      return respond(`Available commands:\n- about / summary\n- skills / stack\n- experience / exp\n- projects / work\n- education / edu\n- contact / email\n- exora\n- clear\n- help`);
+    }
+
+    return respond("🤖 Unknown command. Try 'help' for a list of valid commands.");
   }
-
-  if (cleaned === "exit") {
-    return respond("You can't escape me that easily 😈");
-  }
-
-  if (isClear) {
-    output.innerHTML = '';
-    return;
-  }
-
-  if (isAbout) {
-    return respond(`Hi, I’m Rohan 👋\nA CS sophomore at DTU into AI, tools, and building useful stuff.\nTry 'skills' or 'projects'`);
-  }
-
-  if (isSkills) {
-    return respond(`Languages: Python, C++, HTML/CSS\nAI/ML: PyTorch, scikit-learn, HuggingFace, OpenAI, Gemini\nTools: LangChain, Zapier, n8n, Streamlit, Git, Firebase, Vercel`);
-  }
-
-  if (isProjects) {
-    return respond(`📁 My Projects:\n• Product Review Sentiment Analyzer\n• Structural Crack Detection\n• Lead Enrichment Agent`);
-  }
-
-  if (isHelp) {
-    return respond(`Available commands:\n- about / who are you\n- skills / stack\n- projects / work\n- clear\n- help`);
-  }
-
-  return respond("🤖 Unknown command. Try 'help' for a list of valid commands.");
-}
 
 
   function print(text) {
